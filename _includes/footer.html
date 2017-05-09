@@ -1,0 +1,26 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        {% for path in site.navigation %}
+          <a class="page-link" href="{{ path.url | relative_url }}">{{ path.title | escape }}</a> <br/>
+        {% endfor %}
+      </div>
+
+      <div class="footer-col footer-col-2">
+      </div>
+
+      <div class="footer-col footer-col-3">
+        {% for path in site.information %}
+          <a class="page-link" href="{{ path.url | relative_url }}">{{ path.title | escape }}</a> <br/>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+
+</footer>
